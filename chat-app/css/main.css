@@ -17,6 +17,20 @@ body {
   margin: 0;
 }
 
+@media (max-width: 700px) {
+  body {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 51px auto 50px;
+        grid-template-rows: 51px auto 50px;
+        grid-template-areas: "aside" "main" "messenger";
+  }
+  body.burger-expanded {
+    -ms-grid-rows: 70% auto 50px;
+        grid-template-rows: 70% auto 50px;
+  }
+}
+
 body a {
   text-decoration: none;
   color: #fff;
@@ -26,6 +40,16 @@ body main {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: main;
+}
+
+body main #content {
+  margin: 0 10%;
+}
+
+@media (max-width: 850px) {
+  body main #content {
+    margin: 0;
+  }
 }
 
 body main p {
@@ -61,14 +85,42 @@ body aside p {
   position: relative;
 }
 
-body aside p a {
+body aside p #current-info {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  body aside p #current-info {
+    display: initial;
+  }
+}
+
+body aside p #settings-btn,
+body aside p #burger-btn {
   position: absolute;
   top: 0;
   left: -1.3em;
   font-size: 1.3em !important;
 }
 
-body aside p i {
+body aside p #settings-btn {
+  display: initial;
+}
+
+body aside p #burger-btn {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  body aside p #settings-btn {
+    display: none;
+  }
+  body aside p #burger-btn {
+    display: initial;
+  }
+}
+
+body aside p #add-btn {
   position: absolute;
   top: 0;
   right: 0.3em;
@@ -123,6 +175,12 @@ body .modal {
   color: #212123;
   padding: 1em;
   border-radius: 3px;
+}
+
+@media (max-width: 700px) {
+  body .modal {
+    border-radius: 0px;
+  }
 }
 
 body .modal h3 {

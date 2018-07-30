@@ -18,6 +18,21 @@ body {
         "messenger aside";
     margin: 0;
 
+    @media (max-width: 700px) {
+        & {
+            grid-template-columns: 100%;
+            grid-template-rows: 51px auto 50px;
+            grid-template-areas: 
+                "aside"
+                "main"
+                "messenger";
+        }
+
+        &.burger-expanded {
+            grid-template-rows: 70% auto 50px;
+        }
+    }
+
     a {
         text-decoration: none;
         color: #fff;
@@ -25,25 +40,35 @@ body {
 
     main {
         grid-area: main;
-    }
 
-    main p {
-        margin: 1em 1em 0;
-        padding: 1em;
-        background: lighten($primary, 5%);
-        border-radius: 10px;
-        opacity: .4%;
-        font-size: .9em;
-        display: block;
-        clear: both;
-        max-width: 80%;
-
-        &.right {
-            float: right;
+        #content {
+            margin: 0 10%;
         }
 
-        &.left {
-            float: left;
+        @media (max-width: 850px) {
+            #content {
+                margin: 0;
+            }
+        }
+
+        p {
+            margin: 1em 1em 0;
+            padding: 1em;
+            background: lighten($primary, 5%);
+            border-radius: 10px;
+            opacity: .4%;
+            font-size: .9em;
+            display: block;
+            clear: both;
+            max-width: 80%;
+    
+            &.right {
+                float: right;
+            }
+    
+            &.left {
+                float: left;
+            }
         }
     }
 
@@ -54,13 +79,41 @@ body {
         p {
             margin-left: 2.5em;
             position: relative;
-            a {
+
+            #current-info {
+                display: none;
+                @media (max-width: 700px) {
+                    & {
+                        display: initial;
+                    }
+                }
+            }
+
+            #settings-btn,
+            #burger-btn {
                 position: absolute;
                 top: 0;
                 left: -1.3em;
                 font-size: 1.3em!important;
             }
-            i {
+
+            #settings-btn {
+                display: initial;
+            }
+            #burger-btn {
+                display: none;
+            }
+
+            @media (max-width: 700px) {
+                #settings-btn {
+                    display: none;
+                }
+                #burger-btn {
+                    display: initial;
+                }
+            }
+
+            #add-btn {
                 position: absolute;
                 top: 0;
                 right: 0.3em;
@@ -112,6 +165,10 @@ body {
         color: $primary;
         padding: 1em;
         border-radius: 3px;
+
+        @media (max-width: 700px) {
+            border-radius: 0px;
+        }
 
         h3 {
             margin: 0 0 1em;
