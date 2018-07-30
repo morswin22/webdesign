@@ -97,6 +97,7 @@ body aside p #current-info {
 
 body aside p #settings-btn,
 body aside p #burger-btn {
+  cursor: pointer;
   position: absolute;
   top: 0;
   left: -1.3em;
