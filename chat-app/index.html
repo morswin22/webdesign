@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat App</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <link rel="stylesheet" href="css/modals.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    
+    <main data-simplebar>
+        <p class="right">Hejka</p>
+        <p class="right">Co tam?</p>
+        <p class="left">No hej, w sumie to nic, a co u Ciebie?</p>
+        <p class="right">Nuuudy</p>
+    </main>
+
+    <aside data-simplebar>
+        <p>
+            <a class="material-icons" href="/settings">settings</a> 
+            Czat
+            <i class="material-icons" data-modal="#add-modal">add</i>
+        </p>
+
+        <a class="account active" href="/u/ananasek.j">
+            <figure>
+                <img src="https://scontent.fpoz1-1.fna.fbcdn.net/v/t1.0-1/p50x50/36912484_1101342330006425_7552693470255644672_n.jpg?_nc_cat=0&oh=de4211a24ea4d03feadb1b1a6221d0e0&oe=5BDA09FE">
+                <figcaption>Anna Jasińska</figcaption>
+            </figure>
+        </a>
+        <a class="account" href="/u/p.janiak">
+            <figure>
+                <img src="https://avatars3.githubusercontent.com/u/23561091?s=400&u=d0e0493c261904ba319b4f4f2ccf7393bc8822fa&v=4">
+                <figcaption>Patryk Janiak</figcaption>
+            </figure>
+        </a>
+        <a class="account" href="/u/damian.janiak.52">
+            <figure>
+                <img src="https://scontent.fpoz1-1.fna.fbcdn.net/v/t1.0-1/p50x50/12800269_1024345834288566_6906895523055262643_n.jpg?_nc_cat=0&oh=0f1e1bd5ef2a43701abb88b5c793c879&oe=5BD4F689">
+                <figcaption>Damian Janiak</figcaption>
+            </figure>
+        </a>
+    </aside>
+
+    <section id="messenger">
+        <input placeholder="Wpisz wiadomość...">
+        <div>
+            <i class="material-icons">send</i>
+        </div>
+    </section>
+
+    <div class="modal modal-medium" data-modal-window id="add-modal">
+        <a class="close" data-modal-close href="#"><i class="material-icons">close</i></a>
+        <h3>Dodaj znajomych</h3>
+        <ul>
+            <li class="search">
+                <input placeholder="Szukaj...">
+            </li>
+            <li>
+                <figure>
+                    <img src="https://scontent.fpoz1-1.fna.fbcdn.net/v/t1.0-1/p50x50/38001518_286506085445516_430191118437580800_n.jpg?_nc_cat=0&oh=e80a8f838e416c38a2c7cd4fafedc856&oe=5C11A9CE">
+                    <figcaption>Zuza Gimzicka</figcaption>
+                </figure>    
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
+    <script src="js/modals.min.js"></script>
+    <script>modals.init({backspaceClose: false});</script>
+</body>
+</html>
