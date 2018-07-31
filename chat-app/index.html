@@ -14,10 +14,7 @@
     
     <main data-simplebar>
         <div id="content">
-            <p class="right">Hejka</p>
-            <p class="right">Co tam?</p>
-            <p class="left">No hej, w sumie to nic, a co u Ciebie?</p>
-            <p class="right">Nuuudy</p>
+            <!-- From database -->
         </div>
     </main>
 
@@ -25,28 +22,10 @@
         <p>
             <a class="material-icons" href="#settings" id="settings-btn">settings</a> 
             <i class="material-icons" id="burger-btn">menu</i> 
-            Czat <span id="current-info">> Anna Jasińska</span>
+            Czat <span id="current-info"></span>
             <i class="material-icons" data-modal="#add-modal" id="add-btn">add</i>
         </p>
-
-        <a class="account active" href="#u/ananasek.j">
-            <figure>
-                <img src="https://scontent.fpoz1-1.fna.fbcdn.net/v/t1.0-1/p50x50/36912484_1101342330006425_7552693470255644672_n.jpg?_nc_cat=0&oh=de4211a24ea4d03feadb1b1a6221d0e0&oe=5BDA09FE">
-                <figcaption>Anna Jasińska</figcaption>
-            </figure>
-        </a>
-        <a class="account" href="#u/p.janiak">
-            <figure>
-                <img src="https://avatars3.githubusercontent.com/u/23561091?s=400&u=d0e0493c261904ba319b4f4f2ccf7393bc8822fa&v=4">
-                <figcaption>Patryk Janiak</figcaption>
-            </figure>
-        </a>
-        <a class="account" href="#u/damian.janiak.52">
-            <figure>
-                <img src="https://scontent.fpoz1-1.fna.fbcdn.net/v/t1.0-1/p50x50/12800269_1024345834288566_6906895523055262643_n.jpg?_nc_cat=0&oh=0f1e1bd5ef2a43701abb88b5c793c879&oe=5BD4F689">
-                <figcaption>Damian Janiak</figcaption>
-            </figure>
-        </a>
+        <!-- From database -->
     </aside>
 
     <section id="messenger">
@@ -62,19 +41,31 @@
         <ul>
             <li class="search">
                 <input placeholder="Szukaj...">
+                <!-- TODO: add functionality -->
             </li>
-            <li>
-                <figure>
-                    <img src="https://scontent.fpoz1-1.fna.fbcdn.net/v/t1.0-1/p50x50/38001518_286506085445516_430191118437580800_n.jpg?_nc_cat=0&oh=e80a8f838e416c38a2c7cd4fafedc856&oe=5C11A9CE">
-                    <figcaption>Zuza Gimzicka</figcaption>
-                </figure>    
-            </li>
+            <!-- From database -->
         </ul>
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+    <script>
+    // Initialize Firebase
+    firebase.initializeApp({
+        apiKey: "AIzaSyBJcmfbsbFk1Tt6tvSirdAgj6K-ML1J_3M",
+        authDomain: "chat-app-dc9c6.firebaseapp.com",
+        databaseURL: "https://chat-app-dc9c6.firebaseio.com",
+        projectId: "chat-app-dc9c6",
+        storageBucket: "chat-app-dc9c6.appspot.com",
+        messagingSenderId: "482288235254"
+    });
+    </script>
+
     <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
     <script src="js/modals.min.js"></script>
-    <script src="js/menu.js"></script>
     <script>modals.init({backspaceClose: false});</script>
+    
+    <script src="js/chat.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 </html>
