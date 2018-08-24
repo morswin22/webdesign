@@ -38,7 +38,7 @@ img {
 	float: left;
 	width: 225px;
 	/* height: 150px; */
-	margin: -20px 0 0;
+    margin: -20px 0 0;
 	shape-outside: content-box polygon( 3% 42.5%, 52.3% 19.6%, 96.4% 31.4%, 100.8% 41%, 53.9% 86.5%, 2.3% 63.4% );
 	/* shape-outside: url('images/laptop.png'); */
 }
