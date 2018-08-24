@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat';
+  height: 100vh;
+}
+
+body nav {
+  padding: 0 100px;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+}
+
+body nav .logo {
+  padding: 25px;
+  float: left;
+}
+
+body nav ul {
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+  float: right;
+}
+
+body nav ul li {
+  float: left;
+  padding: 10px 0;
+}
+
+body nav ul li a {
+  color: #000;
+  padding: 0.8em;
+  color: #fff;
+}
+
+body nav ul li a.accent {
+  margin: .2em 0 .2em .6em;
+  padding: .6em .8em;
+  background-color: #fd5f26;
+  border-radius: 6px;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+body nav ul li a.accent:hover {
+  text-decoration: none;
+  background-color: #ee4102;
+}
+
+body nav.black {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body nav.black a.accent {
+  background-color: #fd5f26d0;
+}
+
+body nav.black a.accent:hover {
+  background-color: #ee4102d0;
+}
+
+body header {
+  background-image: url("../img/header.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 90vh;
+}
+
+body main {
+  max-width: 1200px;
+  padding: 0 1em;
+  margin: 0 auto;
+}
+
+body main p {
+  text-align: justify;
+  padding: 0.5em;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #2b45d6;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=main.css.map */
