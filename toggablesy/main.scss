@@ -1,0 +1,144 @@
+// bootstrap css
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html, body {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Montserrat';
+}
+
+// toggle css
+
+$label-bg: #eaeaea;
+$label-primary: #2d81ff;
+$label-secondary: darken($label-bg, 27.5%);
+
+label.toggle {
+    width: 50px;
+    height: 25px;
+
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    margin: 3px;
+    margin-bottom: -5px;
+
+    span {
+        position: absolute;
+        left: 0; top: 0; right: 0; bottom: 0;
+
+        background-color: $label-bg;
+        border-radius: 20px;
+
+        box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.25);
+
+        &::before {
+            position: absolute;
+            content: ' ';
+            width: 15px;
+            height: 15px;
+            background-color: $label-secondary;
+            border-radius: 50%;
+            left: 5px;
+            top: 5px;
+            transition: left 300ms ease;
+        }
+
+        transition: background-color 300ms ease;
+
+    }
+
+    input {
+        position: absolute;
+        left: 0; top: 0; right: 0; bottom: 0;
+        visibility: hidden;
+
+        &:checked + span {
+            background-color: $label-primary;
+
+            &::before {
+                left: 30px;
+                background-color: #fff;
+            }
+        }
+    }
+
+}
+
+label.toggle.square {
+    span {
+        border-radius: 0;
+        &::before {
+            border-radius: 0;
+        }
+    }
+}
+
+label.toggle.triangle {
+    span {
+        transition: background-color 400ms ease;
+
+        border-radius: 0px;
+        clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+
+        &::before {
+            border-radius: 0;
+            clip-path: polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%);
+
+            transform: rotateZ(-45deg);
+            transition: left 400ms ease, transform 400ms ease;
+        }
+    }
+
+    input:checked + span {
+
+        &::before {
+            transform: rotateZ(45deg);
+        }
+    }
+}
+
+label.toggle.slant {
+    span {
+        &::before {
+            border-radius: 0;
+            border-top-left-radius: 50%;            
+            border-top-right-radius: 50%;   
+        }
+        &::after {
+            position: absolute;
+            content: ' ';
+            width: 17px;
+            height: 8px;
+            background-color: $label-bg;
+            left: 7px;
+            top: 12px;
+        }
+
+        &::before, 
+        &::after {
+            transition: left 300ms ease, transform 300ms ease, background-color 300ms ease;
+            transform: rotateZ(-45deg);
+        }
+    }
+
+    input:checked + span {
+
+        &::after {
+            left: 26px;
+            background-color: $label-primary;
+        }
+
+        &::before, 
+        &::after {
+            transform: rotateZ(45deg);
+        }
+    }
+}

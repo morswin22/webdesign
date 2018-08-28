@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+html, body {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-family: 'Montserrat';
+}
+
+label.toggle {
+  width: 50px;
+  height: 25px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin: 3px;
+  margin-bottom: -5px;
+}
+
+label.toggle span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #eaeaea;
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-transition: background-color 300ms ease;
+  transition: background-color 300ms ease;
+}
+
+label.toggle span::before {
+  position: absolute;
+  content: ' ';
+  width: 15px;
+  height: 15px;
+  background-color: #a4a4a4;
+  border-radius: 50%;
+  left: 5px;
+  top: 5px;
+  -webkit-transition: left 300ms ease;
+  transition: left 300ms ease;
+}
+
+label.toggle input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+}
+
+label.toggle input:checked + span {
+  background-color: #2d81ff;
+}
+
+label.toggle input:checked + span::before {
+  left: 30px;
+  background-color: #fff;
+}
+
+label.toggle.square span {
+  border-radius: 0;
+}
+
+label.toggle.square span::before {
+  border-radius: 0;
+}
+
+label.toggle.triangle span {
+  -webkit-transition: background-color 400ms ease;
+  transition: background-color 400ms ease;
+  border-radius: 0px;
+  -webkit-clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+          clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+}
+
+label.toggle.triangle span::before {
+  border-radius: 0;
+  -webkit-clip-path: polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%);
+          clip-path: polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%);
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+  -webkit-transition: left 400ms ease, -webkit-transform 400ms ease;
+  transition: left 400ms ease, -webkit-transform 400ms ease;
+  transition: left 400ms ease, transform 400ms ease;
+  transition: left 400ms ease, transform 400ms ease, -webkit-transform 400ms ease;
+}
+
+label.toggle.triangle input:checked + span::before {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+label.toggle.slant span::before {
+  border-radius: 0;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+label.toggle.slant span::after {
+  position: absolute;
+  content: ' ';
+  width: 17px;
+  height: 8px;
+  background-color: #eaeaea;
+  left: 7px;
+  top: 12px;
+}
+
+label.toggle.slant span::before, label.toggle.slant span::after {
+  -webkit-transition: left 300ms ease, background-color 300ms ease, -webkit-transform 300ms ease;
+  transition: left 300ms ease, background-color 300ms ease, -webkit-transform 300ms ease;
+  transition: left 300ms ease, transform 300ms ease, background-color 300ms ease;
+  transition: left 300ms ease, transform 300ms ease, background-color 300ms ease, -webkit-transform 300ms ease;
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
+label.toggle.slant input:checked + span::after {
+  left: 26px;
+  background-color: #2d81ff;
+}
+
+label.toggle.slant input:checked + span::before, label.toggle.slant input:checked + span::after {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+/*# sourceMappingURL=main.css.map */
