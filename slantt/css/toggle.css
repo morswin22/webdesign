@@ -1,0 +1,53 @@
+.toggle {
+  position: relative;
+  display: block;
+  width: 90px;
+  height: 55px;
+  margin-bottom: 30px;
+}
+
+.toggle span {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+  border: 3px solid white;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 35px;
+}
+
+.toggle span::before {
+  position: absolute;
+  content: "";
+  bottom: 14px;
+  top: 8px;
+  background-color: lightgrey;
+  -webkit-transition: .5s;
+  transition: .5s;
+  width: 43%;
+  height: 43%;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
+.toggle input {
+  display: none;
+}
+
+.toggle input:checked + span {
+  background-color: black;
+}
+
+.toggle input:checked + span::before {
+  -webkit-transform: translateX(47px) rotateZ(45deg);
+          transform: translateX(47px) rotateZ(45deg);
+}
+/*# sourceMappingURL=toggle.css.map */

@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,800");
+.toggle {
+  position: relative;
+  display: block;
+  width: 90px;
+  height: 55px;
+  margin-bottom: 30px;
+}
+
+.toggle span {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+  border: 3px solid #000;
+  border-radius: 35px;
+}
+
+.toggle span::before {
+  position: absolute;
+  content: "";
+  bottom: 14px;
+  top: 8px;
+  background-color: #000;
+  -webkit-transition: .5s;
+  transition: .5s;
+  width: 43%;
+  height: 43%;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
+.toggle input {
+  display: none;
+}
+
+.toggle input:checked + span {
+  background-color: black;
+}
+
+.toggle input:checked + span::before {
+  -webkit-transform: translateX(47px) rotateZ(45deg);
+          transform: translateX(47px) rotateZ(45deg);
+  background: #ffee00;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  font-family: 'Montserrat';
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 455.42px;
+      grid-template-rows: 455.42px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background-color: #ececec;
+}
+
+.container {
+  background-color: #ffee00;
+  -webkit-clip-path: polygon(100% 0, 100% 88%, 52% 100%, 55% 94%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 88%, 52% 100%, 55% 94%, 0 100%, 0 0);
+}
+
+.container header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% auto;
+      grid-template-columns: 20% auto;
+  padding: 20px;
+}
+
+.container header #logo {
+  width: 100px;
+}
+
+.container header nav {
+  -ms-grid-column-align: right;
+      justify-self: right;
+}
+
+.container header nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.container header nav ul li {
+  display: inline;
+}
+
+.container header nav ul li a {
+  padding: 8px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
+
+#hero {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+#hero video {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  background-color: #e6d600;
+}
+
+#hero #content {
+  padding: 4em;
+}
+
+#hero #content h1 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 5em;
+  font-weight: 800;
+}
+
+#hero #content p {
+  font-size: 1.5em;
+  margin-top: 0;
+  -webkit-transform: rotateZ(-7deg);
+          transform: rotateZ(-7deg);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  -webkit-animation: fadeIn 1s linear 1.3s forwards;
+          animation: fadeIn 1s linear 1.3s forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.btn {
+  background-color: #000;
+  padding: 15px 60px 15px 30px;
+  color: #fff;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 1.2em;
+  display: inline-block;
+  margin-bottom: 1em;
+  -webkit-clip-path: polygon(0 0, 100% 0, 79% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 79% 100%, 0% 100%);
+}
+
+.fall-down.words {
+  -webkit-transform: rotateZ(-7deg);
+          transform: rotateZ(-7deg);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+}
+
+.fall-down.words .char {
+  -webkit-animation: slide-down 2s forwards cubic-bezier(0, 1.18, 0.82, 1);
+          animation: slide-down 2s forwards cubic-bezier(0, 1.18, 0.82, 1);
+  -webkit-animation-delay: calc(.5s + (.1s * var(--char-index)));
+          animation-delay: calc(.5s + (.1s * var(--char-index)));
+  opacity: 0;
+}
+
+@-webkit-keyframes slide-down {
+  from {
+    -webkit-transform: translateY(125%);
+            transform: translateY(125%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+    font-size: .5em;
+    background-color: black;
+    color: #ffee00;
+    padding: 5px;
+    display: block;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    -webkit-transform: translateY(125%);
+            transform: translateY(125%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+    font-size: .5em;
+    background-color: black;
+    color: #ffee00;
+    padding: 5px;
+    display: block;
+  }
+}
+
+.page {
+  max-width: 1000px;
+  margin: 2.5em 3em;
+}
+/*# sourceMappingURL=main.css.map */

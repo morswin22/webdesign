@@ -1,0 +1,48 @@
+.toggle {
+    // transform: scale(0.5);
+
+    position: relative;
+    display: block;
+    width: 90px;
+    height: 55px;
+    margin-bottom: 30px;
+
+    span {
+        position: absolute;
+        cursor: pointer;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: #fff;
+        transition: .5s;
+        border: 3px solid #000;
+        // box-shadow: 1px 1px 1px rgba(0,0,0,0.1); // md like
+        border-radius: 35px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            bottom: 14px;
+            top: 8px;
+            background-color: #000;
+            transition: .5s;
+
+            width: 43%;
+            height: 43%;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            transform: rotateZ(-45deg);
+        }
+    }
+
+    input {
+        display: none;
+    }
+
+    input:checked + span {
+        background-color:black;
+
+        &::before {
+            transform: translateX(47px) rotateZ(45deg);
+            background: $primary;
+        }
+    }
+}
