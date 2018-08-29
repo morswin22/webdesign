@@ -1,0 +1,91 @@
+.anim {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.anim::before, .anim::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 1;
+  -webkit-clip-path: polygon(33% 1%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(33% 1%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.anim::before {
+  background-color: white;
+  -webkit-animation: showText .8s ease;
+          animation: showText .8s ease;
+}
+
+.anim::after {
+  background-color: black;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation: showText .6s ease;
+          animation: showText .6s ease;
+}
+
+.anim h1 {
+  opacity: 0;
+  -webkit-animation: animateText .7s forwards;
+          animation: animateText .7s forwards;
+}
+
+@-webkit-keyframes animateText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animateText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes showText {
+  0% {
+    width: 0;
+    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translateX(12%);
+            transform: translateX(12%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes showText {
+  0% {
+    width: 0;
+    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translateX(12%);
+            transform: translateX(12%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+/*# sourceMappingURL=h1reveal.css.map */

@@ -1,0 +1,55 @@
+.anim {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0; right: 0;
+        height: 100%;
+        z-index: 1;
+        clip-path: polygon(33% 1%, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    &::before {
+        background-color: $primary;
+        animation: showText .8s ease;
+    }
+
+    &::after {
+        background-color: black;
+        animation-delay: .5s;
+        animation: showText .6s ease;
+    }
+
+    h1 {
+        opacity: 0;
+        animation: animateText .7s forwards;
+    }
+}
+
+@keyframes animateText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes showText {
+    0% {
+        width:0;
+        left:0;
+        transform: translateX(0);
+    }
+    50% {
+        width: 100%;
+        transform: translateX(12%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
