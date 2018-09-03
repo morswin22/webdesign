@@ -1,0 +1,102 @@
+$bg: #333333;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $bg;
+    font-family: 'Montserrat';
+}
+
+h3 {
+    font-size: 1.4em;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 1em;
+}
+
+.wrapper {
+    width: 800px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: .5em;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25px calc(100% - 25px);
+
+    .days {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 25px;
+        .day {
+            justify-self: center;
+            align-self: center;
+        }
+    }
+
+    .list {
+        font-size: .7em;   
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: 100%;
+        .column {
+            padding: 5px;
+
+            &:nth-child(even) {
+                border-right: 1px solid #ccc;
+            }
+            &:last-child {
+                border-right: 0;
+            }
+
+            .row {
+                text-align: center;
+                box-sizing: border-box;
+                padding-top: 0.7em;
+                padding-bottom: 0.7em;
+                height: 50px;
+                border-bottom: 1px solid #adadad;
+                &:last-child {
+                    border-bottom: 0;
+                }
+
+                &.window {
+                    background-color: lighten(pink, 8%);
+                }
+                &.c2tyg {
+                    background-color: lighten(blue, 44%);
+                }
+
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                span {
+                    display: block;
+
+                    &:nth-child(1) {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#a-pon, #a-wt, #a-pt {
+    padding-top: calc(55px);
+}
+
+#a-sr, #a-czw, #p-sr {
+    padding-top: calc(106px);
+}

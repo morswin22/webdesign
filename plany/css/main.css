@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #333333;
+  font-family: 'Montserrat';
+}
+
+h3 {
+  font-size: 1.4em;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+.wrapper {
+  width: 800px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: .5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 25px calc(100% - 25px);
+      grid-template-rows: 25px calc(100% - 25px);
+}
+
+.wrapper .days {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 25px;
+      grid-template-rows: 25px;
+}
+
+.wrapper .days .day {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.wrapper .list {
+  font-size: .7em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+}
+
+.wrapper .list .column {
+  padding: 5px;
+}
+
+.wrapper .list .column:nth-child(even) {
+  border-right: 1px solid #ccc;
+}
+
+.wrapper .list .column:last-child {
+  border-right: 0;
+}
+
+.wrapper .list .column .row {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  height: 50px;
+  border-bottom: 1px solid #adadad;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper .list .column .row:last-child {
+  border-bottom: 0;
+}
+
+.wrapper .list .column .row.window {
+  background-color: #ffe9ed;
+}
+
+.wrapper .list .column .row.c2tyg {
+  background-color: #e0e0ff;
+}
+
+.wrapper .list .column .row span {
+  display: block;
+}
+
+.wrapper .list .column .row span:nth-child(1) {
+  font-size: 0.8em;
+}
+
+#a-pon, #a-wt, #a-pt {
+  padding-top: calc(55px);
+}
+
+#a-sr, #a-czw, #p-sr {
+  padding-top: calc(106px);
+}
+/*# sourceMappingURL=main.css.map */
