@@ -4,8 +4,8 @@
   "theme_color": "#333333",
   "background_color": "#333333",
   "display": "standalone",
-  "Scope": "/",
-  "start_url": "/",
+  "Scope": "/webdesign/plany/",
+  "start_url": "/webdesign/plany/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
