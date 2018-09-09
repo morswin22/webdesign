@@ -2,7 +2,7 @@ let left = document.querySelector('#left img');
 let right = document.querySelector('#right img');
 
 let day = (new Date()).getDay();
-if (day > 5) {
+if (day == 5 || day == 0) {
     day = 1;
 }
 
