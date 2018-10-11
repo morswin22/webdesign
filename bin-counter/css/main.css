@@ -1,0 +1,92 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.wrapper {
+  padding: 1em;
+}
+
+button {
+  /* normalize */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+#bin-counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+@media (max-width: 425px) {
+  #bin-counter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#bin-counter div {
+  width: 2em;
+  height: 2em;
+  margin: 0 1em 0 0;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: #bbddbb;
+  -webkit-transition: background-color 100ms ease-in-out;
+  transition: background-color 100ms ease-in-out;
+}
+
+@media (max-width: 425px) {
+  #bin-counter div {
+    margin: 0 0 1em 0;
+  }
+}
+
+#bin-counter div.powered {
+  background-color: #42b342;
+}
+
+#bin-counter button {
+  margin: 0 0 0 1em;
+  font-size: 1.3em;
+  padding: 0.5em;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+}
+
+@media (max-width: 425px) {
+  #bin-counter button {
+    margin: 1em 0 0 0;
+  }
+}
+
+#bin-counter button:hover {
+  background-color: #eee;
+}
+/*# sourceMappingURL=main.css.map */
